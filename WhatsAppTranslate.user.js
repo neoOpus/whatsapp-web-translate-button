@@ -2,7 +2,7 @@
 // @name           WhatsApp Translate
 // @description    Translates WhatsApp chat messages
 // @match          https://web.whatsapp.com/
-// @version        0.3.1
+// @version        0.3.2
 // @updateURL      https://github.com/kpatelPro/whatsapp-web-translate/raw/master/WhatsAppTranslate.user.js
 // @downloadURL    https://github.com/kpatelPro/whatsapp-web-translate/raw/master/WhatsAppTranslate.user.js
 // @require        https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
@@ -148,7 +148,10 @@ function manipulateMessageElement(messageEmojiText, uiParent, cssFloatButton, tr
 // 	translateButton.style.cssFloat = cssFloatButton;
 	translateButton.style.backgroundColor = "whitesmoke";
 	translateButton.style.zIndex = "1";
-	translateButton.innerHTML = "Translate";
+    translateButton.style['font-size'] = "16px";
+    translateButton.style.padding = "8px 5px 2px 5px";
+    translateButton.style['border-radius'] = "6px";
+	translateButton.innerHTML = "⥯";
 	translateButton.addEventListener ("click", function() {
 		try {
 			$(translationUI).fadeOut();
